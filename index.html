@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<!--link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.5.min.css"-->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript">
+
+	
+		$(document).ready (function (){
+			
+				$("#btnSumar").click(function(){
+					var n1=parseFloat($("#num1").val());
+					var n2=parseFloat($("#num2").val());
+					var suma=n1+n2;
+					$("#res").val(suma);
+					
+				});
+				$("#btnResta").click(function(){
+					var n1=parseFloat($("#num1").val());
+					var n2=parseFloat($("#num2").val());
+					var resta=n1-n2;
+					$("#res").val(resta);
+				});
+				$("#btnMultiplicacion").click(function(){
+					var n1=parseFloat($("#num1").val());
+					var n2=parseFloat($("#num2").val());
+					var multi=n1*n2;
+					$("#res").val(multi);
+				});
+				$("#btnDivicion").click(function(){
+					var n1=parseFloat($("#num1").val());
+					var n2=parseFloat($("#num2").val());
+					 var div=n1/n2;
+					$("#res").val(div);
+				});
+$("#btnFigo").click(function(){
+	var n1=parseFloat($("#num11").val());
+				while(n1<=1);
+        
+
+        fibo1=1;
+        fibo2=1; 
+
+        
+        for(i=2;i<=n1;i++){
+        	
+              
+             fibo2 = fibo1 + fibo2;
+             fibo1 = fibo2 - fibo1;
+             $("#resul").val(fibo2+",");
+        }
+       
+			});	
+		});
+	
+	</script>
+	
+</head>
+<body>
+	<div data-role="page" id="Principal" >
+		<div data-role="header">
+			
+			<p class="colorVerde">Principal</p>
+			
+		</div>
+		<div data-role="content">
+			
+			<a href="#Operaciones" data-role="button" data-transition="flip">Operaciones basicas</a>
+			<a href="#Serie" data-role="button" data-transition="pop">Obtener Figonacci</a>
+			<a href="#Contacto" data-role="button" data-transition="turn">Datos del desarrollador</a>
+		</div>
+		<div data-role="footer">
+			<p>Pie de la aplicación</p>
+		</div>
+	</div>
+	<div data-role="page" id="Contacto" > 
+		<div data-role="footer">
+			<p>Datos Del Desarrollador</p>
+		</div>
+		<div data-role="content">
+			<p>César Silva Hernández</p>
+			<p>13940292</p>
+			<p>2761168367</p>
+			<p>Uni.csh95@gmail.com</p>
+			
+		</div>
+		<div data-role="footer">
+			<p>Bases De Datos Para Dispositivos Móviles</p>
+		</div>
+	</div>
+	<div data-role="page" id="Operaciones" > 
+		
+			<p >Operaciones Básicas</p>
+	
+		
+		<div data-role="content">
+			<input type="text" id="num1" placeholder="Escribe un número">
+			<input type="text" id="num2" placeholder="Escribe un número">
+			<input type="text" id="res" placeholder="Resultado">
+			<input type="button" id="btnSumar" value="Sumar">
+			<input type="button" id="btnResta" value="Restar">
+			<input type="button" id="btnMultiplicacion" value="Multiplicar">
+			<input type="button" id="btnDivicion" value="Dividir">
+			
+		</div>
+		<div data-role="footer">
+			<p>Pie de la app</p>
+		</div>
+	</div>
+	<div data-role="page" id="Serie" > 
+		<div data-role="header">
+			<p>Serie Figonacci</p>
+
+		</div>
+
+		<div data-role="content">
+			<input type="text" id="num11" placeholder="Escribe un número">
+			<input type="text" id="resul" placeholder="Resultado">
+			<input type="button" id="btnFigo" value="Serie Figonacci">
+		</div>
+		<div data-role="footer">
+			<p>Pie de la app</p>
+		</div>
+	</div>
+</body>
+</html>
